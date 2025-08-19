@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:getx_mvvm_architecture/controllers/service_controller.dart';
 import 'package:getx_mvvm_architecture/controllers/splash_controller.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -9,16 +7,17 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Bind the SplashController
-
-    ServiceController serviceController = Get.find();
-
     Get.find<SplashController>();
 
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.primaryContainer,
       body: Center(
-        child: Image.asset("assets/images/app_logo.png"),
+        child: ClipOval(
+            child: Image.asset(
+          "assets/images/app_logo.png",
+          width: 100,
+          height: 100,
+        )),
       ),
     );
   }
