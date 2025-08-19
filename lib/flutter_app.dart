@@ -1,28 +1,14 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:getx_mvvm_architecture/controllers/theme_controller.dart';
 import 'package:getx_mvvm_architecture/routes/app_page.dart';
 import 'package:getx_mvvm_architecture/routes/app_route.dart';
 import 'package:getx_mvvm_architecture/utils/app_translation.dart';
 
-import 'package:get/get.dart';
-
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
-
-  Get.put(ThemeController());
-  AppTranslation translations = AppTranslation();
-  await translations.loadTranslations();
-  runApp(MyApp(
-    translations: translations,
-  ));
-}
-
-class MyApp extends StatelessWidget {
+class FlutterApp extends StatelessWidget {
   final AppTranslation translations;
 
-  MyApp({super.key, required this.translations});
+  FlutterApp({super.key, required this.translations});
   final routeObserver = GetObserver();
   final ThemeController themeController = Get.find();
 

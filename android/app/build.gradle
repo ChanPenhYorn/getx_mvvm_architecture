@@ -36,24 +36,26 @@ android {
     flavorDimensions += "default"
 
     productFlavors {
-    development {
-        dimension = "default"
-        manifestPlaceholders = [appName: "[DEV] Creating Flavors"]
-        applicationIdSuffix = ".dev"
+        development {
+            dimension = "default"
+            manifestPlaceholders = [appName: "[DEV] Creating Flavors"]
+            applicationIdSuffix = ".dev"
+        }
+
+        staging {
+            dimension = "default"
+            manifestPlaceholders = [appName: "[STG] Creating Flavors"]
+            applicationIdSuffix = ".stg"
+        }
+
+        production {
+            dimension = "default"
+            manifestPlaceholders = [appName: "Creating Flavors"]
+            applicationIdSuffix = ""
+        }
     }
 
-    staging {
-        dimension = "default"
-        manifestPlaceholders = [appName: "[STG] Creating Flavors"]
-        applicationIdSuffix = ".stg"
-    }
-
-    production {
-        dimension = "default"
-        manifestPlaceholders = [appName: "Creating Flavors"]
-        applicationIdSuffix = ""
-    }
-}
+    
 }
 
 flutter {

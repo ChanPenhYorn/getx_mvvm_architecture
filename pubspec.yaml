@@ -16,7 +16,7 @@ dependencies:
   get: ^4.6.6
   rename: ^3.0.2
   shared_preferences: ^2.5.1
-  icons_launcher: ^3.0.1
+  flutter_launcher_icons: ^0.14.4
   firebase_core: ^3.12.1
   firebase_analytics: ^11.4.4
   package_info_plus: ^8.3.0
@@ -35,3 +35,27 @@ flutter:
     - assets/locales/
     - assets/svg/
     - assets/images/
+
+
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+
+# Dev flavor
+flutter_icons_dev:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/app_logo_dev.png"
+
+# Staging flavor
+flutter_icons_staging:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/app_logo_stg.png"
+
+# Prod flavor
+flutter_icons_prod:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/app_logo.png"
